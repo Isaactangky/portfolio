@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-isaactang",
+  "version": "1.0.0",
+  "description": "A portfolio website built with html and sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Isaac TANG",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
+}
