@@ -11,12 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome  -->
+    <script
+      src="https://kit.fontawesome.com/b616c6ed71.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="sass/styles.css" />
     <title>Isaac Tang</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__box">
+    <div class="page-container">
+      <!-- HEADER SECTION  -->
+      <header class="header">
+        <!-- <div class="header__box"> -->
         <span>Hello! My name is</span>
         <h1 class="heading-1">Isaac Tang</h1>
         <p class="paragraph mb-s">
@@ -24,36 +31,139 @@
           designing) exceptional digital experiences. Currently, I’m focused on
           building accessible, human-centered products at Upstatement.
         </p>
-        <a href="#" class="btn">Contact me</a>
-      </div>
-    </header>
-    <main>
-      <section class="section-background-skill"></section>
-      <section class="section-projects">
-        <div class="row">
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__img card__img--1">&nbsp;</div>
-              <div class="card__content">
-                <div class="card__info">
-                  <p class="card__heading">Cocktell</p>
-
-                  <p class="card__techs">html, sass, CSS, JavaScript</p>
-                  <p class="card__descriptions">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem optio, tempore ad totam voluptates
-                    architecto!
-                  </p>
+        <a href="#contact-me" class="btn">Contact me</a>
+        <!-- </div> -->
+      </header>
+      <main class="main-container">
+        <!-- ABOUT ME  -->
+        <section class="section-about-me">
+          <div class="mb-m flex-center">
+            <h2 class="heading-2">About Me</h2>
+          </div>
+          <div class="about-me">
+            <div class="about-me__background">
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis aliquam quod esse suscipit expedita illo accusamus
+                neque, officiis, repellat dolore minima eligendi nostrum impedit
+                consequatur pariatur deleniti non maiores rerum.
+              </p>
+              <p class="paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis, exercitationem.
+              </p>
+              <p class="paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis, exercitationem.
+              </p>
+            </div>
+            <div class="about-me__skills">
+              <div class="about-me__skill about-me__skill--frontend">
+                <h4 class="about-me__skill-heading">frontend</h4>
+                <div class="about-me__skill-icons">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-react"></i>
                 </div>
-                <div class="card__buttons">
-                  <a href="#" class="btn btn--small">View Live</a>
-                  <a href="#" class="btn btn--small">View Code</a>
+              </div>
+              <div class="about-me__skill about-me__skill--backend">
+                <h4 class="about-me__skill-heading">Backend</h4>
+                <div class="about-me__skill-icons">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-react"></i>
+                </div>
+              </div>
+              <div class="about-me__skill about-me__skill--misc">
+                <h4 class="about-me__skill-heading">Misc</h4>
+                <div class="about-me__skill-icons">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-react"></i>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <!-- PROJECTS  -->
+        <section class="section-projects">
+          <h2 class="heading-2 heading-2 projects__heading">
+            Projects I've Built
+          </h2>
+          <div class="card">
+            <div class="card__img card__img--1">&nbsp;</div>
+            <div class="card__content">
+              <div class="card__info">
+                <p class="card__heading">Cocktell</p>
+
+                <p class="card__techs">html sass CSS JavaScript</p>
+                <p class="card__descriptions">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem optio, tempore ad totam voluptates architecto
+                  ercitationem optio ercitationem!
+                </p>
+              </div>
+              <div class="card__buttons">
+                <a href="#" class="btn btn--small">Details</a>
+                <a href="#" class="btn btn--small">Live</a>
+                <a href="#" class="btn btn--small">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img card__img--1">&nbsp;</div>
+            <div class="card__content">
+              <div class="card__info">
+                <p class="card__heading">Cocktell</p>
+
+                <p class="card__techs">html sass CSS JavaScript</p>
+                <p class="card__descriptions">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem optio, tempore ad totam voluptates architecto
+                  ercitationem optio ercitationem!
+                </p>
+              </div>
+              <div class="card__buttons">
+                <a href="#" class="btn btn--small">Details</a>
+                <a href="#" class="btn btn--small">Live</a>
+                <a href="#" class="btn btn--small">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img card__img--1">&nbsp;</div>
+            <div class="card__content">
+              <div class="card__info">
+                <p class="card__heading">Cocktell</p>
+
+                <p class="card__techs">html sass CSS JavaScript</p>
+                <p class="card__descriptions">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem optio, tempore ad totam voluptates architecto
+                  ercitationem optio ercitationem tempore ad totam!
+                </p>
+              </div>
+              <div class="card__buttons">
+                <a href="#" class="btn btn--small">Details</a>
+                <a href="#" class="btn btn--small">Live</a>
+                <a href="#" class="btn btn--small">Code</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn projects__btn">View More</a>
+        </section>
+        <section class="section-contact-me" id="contact-me">
+          <div class="mb-l flex-center">
+            <h2 class="heading-2">Contact Me</h2>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="legal">Copyright &copy; 2023 Isaac TANG</div>
+      </footer>
+    </div>
   </body>
 </html>

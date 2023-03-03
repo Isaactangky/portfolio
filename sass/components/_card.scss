@@ -1,9 +1,11 @@
 .card {
   height: 40rem;
-  border: 3px solid $color-secondary;
+  border: 2px solid $color-secondary;
+
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 3rem rgba($color-secondary, 0.2);
+  box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
+  background-color: $color-white;
   &__img {
     background-size: cover;
     height: 20rem;
@@ -24,16 +26,26 @@
     }
   }
   &__content {
-    height: 30rem;
-    background-color: $color-black;
+    height: 35rem;
+    background-color: $color-primary-dark-3;
     transition: all 0.3s;
     color: $color-white;
     font-size: 1.6rem;
     // padding: 1rem 2rem;
     // border-top: 2px solid $color-secondary;
+    clip-path: polygon(
+      0 4rem,
+      60% 4rem,
+      70% 0,
+      100% 0,
+      100% 60%,
+      100% 100%,
+      0 100%
+    );
+    transform: translateY(-4.5rem);
   }
   &:hover &__content {
-    transform: translateY(-10rem);
+    transform: translateY(-15rem);
   }
   &:hover &__img {
     transform: scale(1.05);
@@ -41,11 +53,12 @@
   }
   // CARD CONTENT
   &__info {
-    height: 20rem;
+    height: 25rem;
     padding: 1rem 2rem 0rem;
   }
   &__heading {
-    text-align: center;
+    // letter-spacing: 1px;
+    text-align: right;
     font-size: 2rem;
     color: $color-primary;
     font-weight: 500;
@@ -54,9 +67,14 @@
   &__techs {
     text-transform: uppercase;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0.5px;
+
     color: $color-primary-light;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  &__descriptions {
   }
   &__buttons {
     height: 10rem;
@@ -64,5 +82,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 0rem 2rem;
   }
 }

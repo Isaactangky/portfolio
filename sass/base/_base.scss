@@ -14,3 +14,18 @@ body {
   box-sizing: border-box;
   background-color: $color-black;
 }
+
+.page-container {
+  display: grid;
+  // 8-column system
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(
+      6rem,
+      1fr
+    );
+  grid-template-rows: 100vh;
+  grid-auto-rows: min-content;
+}
+::selection {
+  color: $color-black;
+  background-color: $color-primary-light;
+}

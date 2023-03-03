@@ -1,12 +1,24 @@
 .header {
-  height: 100vh;
+  grid-column: 2 / -2;
+  align-self: center;
+  justify-self: center;
   span {
     color: $color-white;
     display: block;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    animation: moveIn 1s ease 0.2s;
+    animation-fill-mode: backwards;
+  }
+  p {
+    max-width: 60rem;
+  }
+
+  p,
+  a {
+    animation: moveIn 1s ease 1.5s;
+    animation-fill-mode: backwards;
   }
   &__box {
-    @include center-self;
   }
 }

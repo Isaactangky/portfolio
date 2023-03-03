@@ -1,0 +1,24 @@
+@keyframes animateHeading1 {
+  0% {
+    transform: translateX(-1rem);
+    background-size: 200%;
+    color: $color-primary;
+  }
+  100% {
+    background-size: 220%;
+    background-position: 100%;
+    transform: translateX(0);
+    color: $color-primary-dark-2;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
