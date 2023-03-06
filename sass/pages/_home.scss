@@ -1,31 +1,12 @@
-.section-projects {
-  padding: 5rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 6rem;
-}
-.projects {
-  &__heading {
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
-  &__btn {
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
-}
-
-////////////////////////////////////////////////////////////////
-// ABOUT ME
 .section-about-me {
-  padding: 0rem 2rem 5rem;
+  padding: 10rem 2rem;
 }
 
 .about-me {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
   gap: 6rem;
-
+  // BACKGROUND
   &__background,
   &__skills {
     padding: 2rem;
@@ -35,6 +16,7 @@
       font-size: 1.8rem;
     }
   }
+  // SKILLS
   &__skills {
     padding-top: 3rem;
 
@@ -45,6 +27,11 @@
     gap: 1.5rem;
     &:hover .about-me__skill:not(:hover) {
       transform: scale(0.9);
+    }
+    @media only screen and (max-width: $bp-m) {
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
     }
   }
   &__skill {
@@ -62,6 +49,10 @@
     );
     border: 3px solid $color-secondary;
     border-bottom: 2.5rem solid $color-secondary;
+
+    @media only screen and (max-width: $bp-m) {
+      flex: 1;
+    }
     &:hover {
       background-color: $color-primary-dark;
       transform: scale(1.05);
@@ -125,4 +116,23 @@
 .section-contact-me {
   padding: 5rem 0;
   display: flex;
+}
+////////////////////////////////////////////////////////////////
+// PROJECTS
+
+.section-projects {
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 5rem;
+}
+.projects {
+  &__heading {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  &__btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }

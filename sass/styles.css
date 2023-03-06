@@ -1,13 +1,11 @@
 @keyframes animateHeading1 {
   0% {
-    transform: translateX(-1rem);
     background-size: 200%;
     color: #05d9e8;
   }
   100% {
     background-size: 220%;
     background-position: 100%;
-    transform: translateX(0);
     color: #01012b;
   }
 }
@@ -21,6 +19,16 @@
     opacity: 1;
   }
 }
+@keyframes animateVisible {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 *,
 *::after,
 *::before {
@@ -31,6 +39,11 @@
 
 html {
   font-size: 62.5%;
+}
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -72,12 +85,12 @@ body {
   font-weight: 600;
   display: inline-block;
   transform: translateX(-1rem);
-  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #ff2a6d 50.1%, rgba(255, 42, 109, 0.5) 100%);
+  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #ff2a6d 50.1%);
   background-size: 200%;
   transition: all 0.2s cubic-bezier(1, 0, 0, 1);
   -webkit-clip-path: polygon(0 3rem, 3rem 0, 100% 0, 100% calc(100% - 3rem), calc(100% - 3rem) 100%, 0 100%);
           clip-path: polygon(0 3rem, 3rem 0, 100% 0, 100% calc(100% - 3rem), calc(100% - 3rem) 100%, 0 100%);
-  animation: animateHeading1 0.5s cubic-bezier(1, 0, 0, 1) 1s;
+  animation: animateHeading1 2s ease 1s;
   animation-fill-mode: forwards;
 }
 
@@ -188,24 +201,26 @@ body {
 }
 
 .card {
-  height: 40rem;
-  border: 2px solid #ff2a6d;
-  border-radius: 3px;
+  height: 43rem;
+  border: 5px solid #ff2a6d;
+  border-bottom: 3rem solid #ff2a6d;
   overflow: hidden;
-  box-shadow: 1rem 1rem 0rem rgba(255, 42, 109, 0.5);
   background-color: #ccd6f7;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 2rem, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
+          clip-path: polygon(0 0, 100% 0%, 100% 2rem, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
 }
 .card__img {
   background-size: cover;
   height: 20rem;
-  background-blend-mode: color;
+  width: 100%;
+  background-blend-mode: soft-light;
+  display: block;
   transition: all 0.3s;
 }
 .card__img--1 {
   background-image: linear-gradient(to right bottom, #005678, #d1f7ff), url(../../img/projects-Cocktell-desktop.png);
 }
 .card__content {
-  height: 35rem;
   background-color: #112240;
   transition: all 0.3s;
   color: #ccd6f7;
@@ -223,14 +238,15 @@ body {
 }
 .card__info {
   height: 25rem;
-  padding: 1rem 2rem 0rem;
 }
 .card__heading {
+  background-color: #05d9e8;
+  color: #ccd6f7;
   text-align: right;
   font-size: 2rem;
-  color: #05d9e8;
   font-weight: 500;
   margin-bottom: 1rem;
+  padding: 1rem 2rem;
 }
 .card__techs {
   text-transform: uppercase;
@@ -250,10 +266,70 @@ body {
   padding: 0rem 2rem;
 }
 
+.nav-container {
+  height: 6rem;
+  width: 100%;
+  padding: 2rem 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d1f7ff;
+  animation: animateVisible 1s ease 2.5s;
+  animation-fill-mode: backwards;
+}
+.nav__logo img {
+  height: 3rem;
+}
+.nav__links {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.nav__link:-moz-any-link {
+  color: #d1f7ff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-shadow: 0 0.5rem 0.5rem rgba(1, 2, 21, 0.5);
+}
+.nav__link:any-link {
+  color: #d1f7ff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  text-shadow: 0 0.5rem 0.5rem rgba(1, 2, 21, 0.5);
+}
+.nav__link:-moz-any-link:hover {
+  color: #05d9e8;
+}
+.nav__link:any-link:hover {
+  color: #05d9e8;
+}
+
 .header {
-  grid-column: 2/-2;
-  align-self: center;
-  justify-self: center;
+  grid-column: 1/-1;
+  background-image: linear-gradient(rgba(1, 2, 21, 0.8), rgba(1, 2, 21, 0.8)), url(../../img/hero.png);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .header span {
   color: #ccd6f7;
@@ -268,7 +344,7 @@ body {
 }
 .header p,
 .header a {
-  animation: moveIn 1s ease 1.5s;
+  animation: moveIn 1s ease 2.5s;
   animation-fill-mode: backwards;
 }
 .main-container {
@@ -284,30 +360,37 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.section-projects {
-  padding: 5rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 6rem;
+.footer__social-icons {
+  height: 100vh;
+  width: 6rem;
+  position: fixed;
+  right: 3rem;
+  top: 0;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  animation: animateVisible 1s ease 2.5s;
+  animation-fill-mode: backwards;
 }
-
-.projects__heading {
-  grid-column: 1/-1;
-  justify-self: center;
+.footer__social-icon {
+  transition: all 0.5s;
+  cursor: pointer;
 }
-.projects__btn {
-  grid-column: 1/-1;
-  justify-self: center;
+.footer__social-icon:hover {
+  transform: translateY(-3px) scale(1.3);
+  color: #05d9e8;
 }
 
 .section-about-me {
-  padding: 0rem 2rem 5rem;
+  padding: 10rem 2rem;
 }
 
 .about-me {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
   gap: 6rem;
 }
 .about-me__background, .about-me__skills {
@@ -326,6 +409,12 @@ body {
 .about-me__skills:hover .about-me__skill:not(:hover) {
   transform: scale(0.9);
 }
+@media only screen and (max-width: 56.25em) {
+  .about-me__skills {
+    display: flex;
+    align-items: center;
+  }
+}
 .about-me__skill {
   background-color: #112240;
   padding: 1.5rem;
@@ -334,6 +423,11 @@ body {
           clip-path: polygon(0 0, 100% 0%, 100% 2rem, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
   border: 3px solid #ff2a6d;
   border-bottom: 2.5rem solid #ff2a6d;
+}
+@media only screen and (max-width: 56.25em) {
+  .about-me__skill {
+    flex: 1;
+  }
 }
 .about-me__skill:hover {
   background-color: #005678;
@@ -382,4 +476,20 @@ body {
 .section-contact-me {
   padding: 5rem 0;
   display: flex;
+}
+
+.section-projects {
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 5rem;
+}
+
+.projects__heading {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.projects__btn {
+  grid-column: 1/-1;
+  justify-self: center;
 }

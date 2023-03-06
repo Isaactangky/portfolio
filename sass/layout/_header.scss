@@ -1,13 +1,26 @@
 .header {
-  grid-column: 2 / -2;
-  align-self: center;
-  justify-self: center;
+  grid-column: 1 / -1;
+  // align-self: center;
+  // justify-self: center;
+  background-image: linear-gradient(
+      rgba($color-black, 0.8),
+      rgba($color-black, 0.8)
+    ),
+    url(../../img/hero.png);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__container {
+  }
   span {
     color: $color-white;
     display: block;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    animation: moveIn 1s ease 0.2s;
+    animation: $animate-greeting;
     animation-fill-mode: backwards;
   }
   p {
@@ -16,7 +29,7 @@
 
   p,
   a {
-    animation: moveIn 1s ease 1.5s;
+    animation: $animate-selfin;
     animation-fill-mode: backwards;
   }
   &__box {

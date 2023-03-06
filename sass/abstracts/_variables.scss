@@ -20,3 +20,14 @@ $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
 $max-width: 1120px;
+
+// RESPONSIVE BREAKPOINTS
+
+$bp-l: 62.5em; // 1000px
+$bp-m: 56.25em; // 900px
+
+// ANIMATIONS
+$animate-greeting: moveIn 1s ease 0.2s;
+$animate-h1: animateHeading1 2s ease 1s;
+$animate-nav: animateVisible 1s ease 2.5s;
+$animate-selfin: moveIn 1s ease 2.5s;

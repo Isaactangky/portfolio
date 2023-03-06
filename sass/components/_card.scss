@@ -1,15 +1,25 @@
 .card {
-  height: 40rem;
-  border: 2px solid $color-secondary;
+  height: 43rem;
+  border: 5px solid $color-secondary;
+  border-bottom: 3rem solid $color-secondary;
 
-  border-radius: 3px;
   overflow: hidden;
-  box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
+  // box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
   background-color: $color-white;
+  clip-path: polygon(
+    0 0,
+    100% 0%,
+    100% 2rem,
+    100% 100%,
+    2rem 100%,
+    0 calc(100% - 2rem)
+  );
   &__img {
     background-size: cover;
     height: 20rem;
-    background-blend-mode: color;
+    width: 100%;
+    background-blend-mode: soft-light;
+    display: block;
     // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     // border-top-left-radius: 2px;
@@ -26,7 +36,7 @@
     }
   }
   &__content {
-    height: 35rem;
+    // height: 35rem;
     background-color: $color-primary-dark-3;
     transition: all 0.3s;
     color: $color-white;
@@ -54,15 +64,17 @@
   // CARD CONTENT
   &__info {
     height: 25rem;
-    padding: 1rem 2rem 0rem;
   }
   &__heading {
     // letter-spacing: 1px;
+    background-color: $color-primary;
+    color: $color-white;
     text-align: right;
     font-size: 2rem;
-    color: $color-primary;
+    // color: $color-primary;
     font-weight: 500;
     margin-bottom: 1rem;
+    padding: 1rem 2rem;
   }
   &__techs {
     text-transform: uppercase;

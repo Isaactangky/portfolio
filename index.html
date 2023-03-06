@@ -20,19 +20,31 @@
     <title>Isaac Tang</title>
   </head>
   <body>
+    <div class="nav-container">
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="img/logo2.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li class="nav__item"><a href="#" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="page-container">
       <!-- HEADER SECTION  -->
       <header class="header">
-        <!-- <div class="header__box"> -->
-        <span>Hello! My name is</span>
-        <h1 class="heading-1">Isaac Tang</h1>
-        <p class="paragraph mb-s">
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building accessible, human-centered products at Upstatement.
-        </p>
-        <a href="#contact-me" class="btn">Contact me</a>
-        <!-- </div> -->
+        <div class="header__container">
+          <span>Hello! My name is</span>
+          <h1 class="heading-1">Isaac Tang</h1>
+          <p class="paragraph mb-s">
+            I’m a software engineer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I’m focused
+            on building accessible, human-centered products at Upstatement.
+          </p>
+          <a href="#contact-me" class="btn">Contact me</a>
+        </div>
       </header>
       <main class="main-container">
         <!-- ABOUT ME  -->
@@ -90,7 +102,7 @@
         </section>
         <!-- PROJECTS  -->
         <section class="section-projects">
-          <h2 class="heading-2 heading-2 projects__heading">
+          <h2 class="heading-2 heading-2 projects__heading mb-m">
             Projects I've Built
           </h2>
           <div class="card">
@@ -153,7 +165,32 @@
               </div>
             </div>
           </div>
-          <a href="#" class="btn projects__btn">View More</a>
+          <div class="card">
+            <div class="card__img card__img--1">&nbsp;</div>
+            <div class="card__content">
+              <div class="card__info">
+                <p class="card__heading">Cocktell</p>
+
+                <p class="card__techs">html sass CSS JavaScript</p>
+                <p class="card__descriptions">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem optio, tempore ad totam voluptates architecto
+                  ercitationem optio ercitationem tempore ad totam!
+                </p>
+              </div>
+              <div class="card__buttons">
+                <a href="#" class="btn btn--small">Details</a>
+                <a href="#" class="btn btn--small">Live</a>
+                <a href="#" class="btn btn--small">Code</a>
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/Isaactangky"
+            target="_blank"
+            class="btn projects__btn"
+            >View More</a
+          >
         </section>
         <section class="section-contact-me" id="contact-me">
           <div class="mb-l flex-center">
@@ -161,7 +198,14 @@
           </div>
         </section>
       </main>
+      <!-- FOOTER SECTION  -->
       <footer class="footer">
+        <!-- SOCIAL ICONS -->
+        <div class="footer__social-icons">
+          <i class="fa-brands fa-github footer__social-icon"></i>
+          <i class="fa-regular fa-envelope footer__social-icon"></i>
+          <i class="fa-brands fa-twitter footer__social-icon"></i>
+        </div>
         <div class="legal">Copyright &copy; 2023 Isaac TANG</div>
       </footer>
     </div>

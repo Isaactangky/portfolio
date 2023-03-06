@@ -26,9 +26,9 @@ body {
     90deg,
     transparent 0%,
     transparent 50%,
-    $color-secondary 50.1%,
-    rgba($color-secondary, 0.5) 100%
+    $color-secondary 50.1%
   );
+  // rgba($color-secondary, 0.5) 100%
   background-size: 200%;
   transition: all 0.2s cubic-bezier(1, 0, 0, 1);
   clip-path: polygon(
@@ -39,7 +39,7 @@ body {
     calc(100% - 3rem) 100%,
     0 100%
   );
-  animation: animateHeading1 0.5s cubic-bezier(1, 0, 0, 1) 1s;
+  animation: $animate-h1;
   animation-fill-mode: forwards;
   // &:hover {
   //   color: $color-primary-dark-2;
