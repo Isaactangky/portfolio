@@ -1,7 +1,7 @@
 .card {
-  height: 43rem;
-  border: 5px solid $color-secondary;
-  border-bottom: 3rem solid $color-secondary;
+  // height: 43rem;
+  border: 5px solid $color-primary-dark;
+  border-bottom: 3rem solid $color-primary-dark;
 
   overflow: hidden;
   // box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
@@ -67,16 +67,19 @@
   }
   &__heading {
     // letter-spacing: 1px;
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: $color-yellow;
+    color: $color-primary-dark;
     text-align: right;
     font-size: 2rem;
     // color: $color-primary;
     font-weight: 500;
+    line-height: 1;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
   }
   &__techs {
+    padding: 1rem 2rem;
+
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 300;
@@ -87,6 +90,7 @@
     margin-bottom: 0.5rem;
   }
   &__descriptions {
+    padding: 0rem 2rem 1rem;
   }
   &__buttons {
     height: 10rem;

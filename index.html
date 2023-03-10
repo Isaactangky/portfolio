@@ -23,12 +23,20 @@
     <div class="nav-container">
       <nav class="nav">
         <div class="nav__logo">
-          <img src="img/logo2.png" alt="logo" />
+          <a href="#">
+            <img src="img/logo2.png" alt="logo" />
+          </a>
         </div>
         <ul class="nav__links">
-          <li class="nav__item"><a href="#" class="nav__link">About Me</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <li class="nav__item">
+            <a href="#section-about-me" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-contact-me" class="nav__link">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -48,7 +56,7 @@
       </header>
       <main class="main-container">
         <!-- ABOUT ME  -->
-        <section class="section-about-me">
+        <section class="section-about-me" id="section-about-me">
           <div class="mb-m flex-center">
             <h2 class="heading-2">About Me</h2>
           </div>
@@ -101,7 +109,7 @@
           </div>
         </section>
         <!-- PROJECTS  -->
-        <section class="section-projects">
+        <section class="section-projects" id="section-projects">
           <h2 class="heading-2 heading-2 projects__heading mb-m">
             Projects I've Built
           </h2>
@@ -119,7 +127,9 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <a href="#" class="btn btn--small">Details</a>
+                <a href="#" class="btn btn--small btn--details" data-popup="1"
+                  >Details</a
+                >
                 <a href="#" class="btn btn--small">Live</a>
                 <a href="#" class="btn btn--small">Code</a>
               </div>
@@ -192,7 +202,7 @@
             >View More</a
           >
         </section>
-        <section class="section-contact-me" id="contact-me">
+        <section class="section-contact-me" id="section-contact-me">
           <div class="mb-l flex-center">
             <h2 class="heading-2">Contact Me</h2>
           </div>
@@ -208,6 +218,62 @@
         </div>
         <div class="legal">Copyright &copy; 2023 Isaac TANG</div>
       </footer>
+      <div class="popup popup--active popup--1">
+        <div class="popup__overlay" data-popup="1"></div>
+        <div class="popup__content">
+          <div class="popup__img">
+            <img src="img/projects-Cocktell-desktop.png" alt="Cocktell image" />
+          </div>
+          <div class="popup__text">
+            <p class="popup__subtitle">Tech Used:</p>
+            <p class="paragraph">html sass CSS JavaScript</p>
+            <p class="popup__subtitle">Overview:</p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias asperiores tenetur harum excepturi voluptates
+              repudiandae hic magni dicta autem iste quidem aliquid ratione ad
+              minima beatae, quasi nostrum officiis. Magnam?
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="/script.js"></script>
 </html>
