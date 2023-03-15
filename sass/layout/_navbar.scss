@@ -6,26 +6,27 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $color-black;
+  animation: $animate-nav;
+  animation-fill-mode: backwards;
 }
 .nav {
   width: 100%;
   max-width: $max-width;
-
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: $color-primary-light;
-  animation: $animate-nav;
-  animation-fill-mode: backwards;
 
   &__logo {
     img {
       height: 3rem;
       // width: 100%;
+      text-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.6);
     }
   }
   &__links {
@@ -41,7 +42,7 @@
     text-transform: uppercase;
     font-size: 1.4rem;
     transition: all 0.3s;
-    text-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.5);
+    text-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.6);
     &:hover {
       color: $color-primary;
     }

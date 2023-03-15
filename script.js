@@ -44,9 +44,9 @@ const animateHeading2 = function (entries, observer) {
 };
 const sectionObserver = new IntersectionObserver(animateHeading2, {
   root: null,
-  threshold: 0,
+  // rootMargin: "-50px",
+  threshold: 1,
 });
-allHeading2.forEach((section) => {
-  // section.classList.('section--hidden');
-  sectionObserver.observe(section);
+allHeading2.forEach((heading2) => {
+  sectionObserver.observe(heading2);
 });

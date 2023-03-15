@@ -1,87 +1,164 @@
+// .card {
+//   height: 43rem;
+//   border: 5px solid $color-primary-dark;
+//   border-bottom: 3rem solid $color-primary-dark;
+
+//   overflow: hidden;
+//   // box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
+//   background-color: $color-white;
+//   clip-path: polygon(
+//     0 0,
+//     100% 0%,
+//     100% 2rem,
+//     100% 100%,
+//     2rem 100%,
+//     0 calc(100% - 2rem)
+//   );
+//   &__img {
+//     background-size: cover;
+//     height: 20rem;
+//     width: 100%;
+//     background-blend-mode: soft-light;
+//     display: block;
+//     // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+//     // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+//     // border-top-left-radius: 2px;
+//     // border-top-right-radius: 2px;
+//     transition: all 0.3s;
+
+//     &--1 {
+//       background-image: linear-gradient(
+//           to right bottom,
+//           $color-primary-dark,
+//           $color-primary-light
+//         ),
+//         url(../../img/projects-Cocktell-desktop.png);
+//     }
+//   }
+//   &__content {
+//     // height: 35rem;
+//     background-color: $color-primary-dark-3;
+//     transition: all 0.3s;
+//     color: $color-white;
+//     font-size: 1.6rem;
+//     // padding: 1rem 2rem;
+//     // border-top: 2px solid $color-secondary;
+//     clip-path: polygon(
+//       0 4rem,
+//       60% 4rem,
+//       70% 0,
+//       100% 0,
+//       100% 60%,
+//       100% 100%,
+//       0 100%
+//     );
+//     transform: translateY(-4.5rem);
+//   }
+//   &:hover &__content {
+//     transform: translateY(-15rem);
+//   }
+//   &:hover &__img {
+//     transform: scale(1.05);
+//     filter: blur(3px) brightness(80%);
+//   }
+//   // CARD CONTENT
+//   &__info {
+//     height: 25rem;
+//   }
+//   &__heading {
+//     // letter-spacing: 1px;
+//     background-color: $color-yellow;
+//     color: $color-primary-dark;
+//     text-align: right;
+//     font-size: 2rem;
+//     // color: $color-primary;
+//     font-weight: 500;
+//     line-height: 1;
+//     margin-bottom: 1rem;
+//     padding: 1rem 2rem;
+//   }
+//   &__techs {
+//     padding: 1rem 2rem;
+
+//     text-transform: uppercase;
+//     font-size: 1.2rem;
+//     font-weight: 300;
+//     letter-spacing: 0.5px;
+
+//     color: $color-primary-light;
+//     display: block;
+//     margin-bottom: 0.5rem;
+//   }
+//   &__descriptions {
+//     padding: 0rem 2rem 1rem;
+//   }
+//   &__buttons {
+//     height: 10rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 2rem;
+//     padding: 0rem 2rem;
+//   }
+// }
+
 .card {
-  // height: 43rem;
-  border: 5px solid $color-primary-dark;
-  border-bottom: 3rem solid $color-primary-dark;
-
+  // background-color: orangered;
+  position: relative;
+  border-radius: 5px;
   overflow: hidden;
-  // box-shadow: 1rem 1rem 0rem rgba($color-secondary, 0.5);
-  background-color: $color-white;
-  clip-path: polygon(
-    0 0,
-    100% 0%,
-    100% 2rem,
-    100% 100%,
-    2rem 100%,
-    0 calc(100% - 2rem)
-  );
-  &__img {
-    background-size: cover;
-    height: 20rem;
-    width: 100%;
-    background-blend-mode: soft-light;
-    display: block;
-    // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    // border-top-left-radius: 2px;
-    // border-top-right-radius: 2px;
-    transition: all 0.3s;
+  // height: 34rem;
+  &--front,
+  &--back {
+    transition: transform 1.5s;
+    backface-visibility: hidden;
+    background-color: $color-primary-dark-3;
+  }
+  &--front {
+    // background-color: green;
+    z-index: 2;
+  }
+  &--back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    // background-color: lightcoral;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &:hover &--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &--back {
+    transform: rotateY(0deg);
+  }
 
-    &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-dark,
-          $color-primary-light
-        ),
-        url(../../img/projects-Cocktell-desktop.png);
+  // FRONT STYLINGS
+  &__img {
+    img {
+      width: 100%;
     }
   }
-  &__content {
-    // height: 35rem;
-    background-color: $color-primary-dark-3;
-    transition: all 0.3s;
-    color: $color-white;
-    font-size: 1.6rem;
-    // padding: 1rem 2rem;
-    // border-top: 2px solid $color-secondary;
-    clip-path: polygon(
-      0 4rem,
-      60% 4rem,
-      70% 0,
-      100% 0,
-      100% 60%,
-      100% 100%,
-      0 100%
-    );
-    transform: translateY(-4.5rem);
-  }
-  &:hover &__content {
-    transform: translateY(-15rem);
-  }
-  &:hover &__img {
-    transform: scale(1.05);
-    filter: blur(3px) brightness(80%);
-  }
-  // CARD CONTENT
-  &__info {
-    height: 25rem;
-  }
   &__heading {
-    // letter-spacing: 1px;
-    background-color: $color-yellow;
-    color: $color-primary-dark;
-    text-align: right;
-    font-size: 2rem;
-    // color: $color-primary;
+    text-align: center;
+    text-transform: capitalize;
     font-weight: 500;
-    line-height: 1;
-    margin-bottom: 1rem;
-    padding: 1rem 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+    // background-image: linear-gradient(
+    //   to right bottom,
+    //   $color-primary-dark,
+    //   $color-primary-light
+    // );
   }
-  &__techs {
-    padding: 1rem 2rem;
 
+  // BACK STYLINGS
+  &__techs {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 300;
     letter-spacing: 0.5px;
 
@@ -90,14 +167,14 @@
     margin-bottom: 0.5rem;
   }
   &__descriptions {
-    padding: 0rem 2rem 1rem;
+    font-size: 1.6rem;
   }
   &__buttons {
-    height: 10rem;
+    margin-top: auto;
+    // height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     padding: 0rem 2rem;
   }
 }
